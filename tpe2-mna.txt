@@ -1,0 +1,31 @@
+Exactitud --> Norma entre paso h y paso h/2 para Lie Trotter, Strang, Afin Orden 2, Afin Orden 4, Afin Orden 6 (secuencial, la exactitud es la misma)
+
+Exactitud segun orden --> Norma entre paso h y paso h/2 para Afin Orden 2, Afin Orden 4, Afin Orden 6
+
+Exactitud en un metodo de cuarto orden segun el paso usado --> Norma entre paso h y paso h/2 para Afin Orden 4 con distintos h: h, h/2, h/4, h/8
+
+Como cambia el Speed Up segun el orden --> Corro Afin sin y con SPMD con orden 2, orden 4, orden 6
+
+
+Animaciones temporales de la solucion
+
+
+---- Lie Trotter ----
+Error con Lie Trotter
+    1.3215
+
+---- Strang ----
+Error con Strang
+    1.3225
+
+---- Afin Simetrico Orden 2 ----
+Error con Afin Simetrico Orden 2
+    1.3225
+
+---- Afin Simetrico Orden 4 ----
+Error con Afin Simetrico Orden 4
+    0.4364
+
+---- Afin Simetrico Orden 6 ----
+Error con Afin Simetrico Orden 6
+    0.2394

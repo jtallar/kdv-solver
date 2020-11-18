@@ -1,6 +1,6 @@
 function result = afinSym(f, order, xmin, xmax, N, tmax, delta_t, plotter)
     if mod(order,2) ~= 0 || order <= 0
-        disp("Order must be pair");
+        disp('Order must be pair');
         return;
     end
 

@@ -1,12 +1,14 @@
 function result = afinSymSPMD(f, order, xmin, xmax, N, tmax, delta_t, plotter)
     if mod(order,2) ~= 0 || order <= 0
-        disp("Order must be pair");
+        disp('Order must be pair');
         return;
     end
 
     c = parcluster;
     c.NumWorkers = order;
     parpool('local', order);
+    
+    tic
     
     x = linspace(xmin,xmax,N);
     delta_x = x(2) - x(1);
@@ -50,6 +52,8 @@ function result = afinSymSPMD(f, order, xmin, xmax, N, tmax, delta_t, plotter)
             end
         end
     end
+    
+    toc
     
     delete(gcp('nocreate'))
     
