@@ -1,4 +1,4 @@
-function result = genericKDV(f, xmin, xmax, N, tmax, delta_t, plotter)
+function result = strang(f, xmin, xmax, N, tmax, delta_t, plotter)
     x = linspace(xmin,xmax,N);
     delta_x = x(2) - x(1);
     
@@ -21,8 +21,9 @@ function result = genericKDV(f, xmin, xmax, N, tmax, delta_t, plotter)
     for n = 1:nmax
         t = n*delta_t;
         
-        U = fiLinear(U, k, delta_t);
+        U = fiLinear(U, k, delta_t/2);
         U = fiNonLinear(U, k, delta_t);
+        U = fiLinear(U, k, delta_t/2);
 
         if mod(n,nplt) == 0
             u = real(ifft(U));

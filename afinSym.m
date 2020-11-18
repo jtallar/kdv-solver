@@ -1,4 +1,9 @@
-function result = genericKDV(f, xmin, xmax, N, tmax, delta_t, plotter)
+function result = afinSym(f, order, xmin, xmax, N, tmax, delta_t, plotter)
+    if mod(order,2) ~= 0 || order <= 0
+        disp("Order must be pair");
+        return;
+    end
+
     x = linspace(xmin,xmax,N);
     delta_x = x(2) - x(1);
     
@@ -18,12 +23,17 @@ function result = genericKDV(f, xmin, xmax, N, tmax, delta_t, plotter)
     udata = u.'; tdata = 0;
     U = fft(u);
 
+    gammas = repelem(gammaSym(order), 2); % [g1;g1;g2;g2;g3;g3...]
+    terms = zeros(order, N);
+    
     for n = 1:nmax
         t = n*delta_t;
+              
+        for i=1:order
+            terms(i,:) = gammas(i) * termAfinSym(U, k, delta_t, i);
+        end
+        U = sum(terms);
         
-        U = fiLinear(U, k, delta_t);
-        U = fiNonLinear(U, k, delta_t);
-
         if mod(n,nplt) == 0
             u = real(ifft(U));
             udata = [udata u.']; tdata = [tdata t];

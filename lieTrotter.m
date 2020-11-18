@@ -1,4 +1,4 @@
-function result = genericKDV(f, xmin, xmax, N, tmax, delta_t, plotter)
+function result = lieTrotter(f, xmin, xmax, N, tmax, delta_t, plotter)
     x = linspace(xmin,xmax,N);
     delta_x = x(2) - x(1);
     

@@ -1,4 +1,13 @@
-function result = genericKDV(f, xmin, xmax, N, tmax, delta_t, plotter)
+function result = afinSymSPMD(f, order, xmin, xmax, N, tmax, delta_t, plotter)
+    if mod(order,2) ~= 0 || order <= 0
+        disp("Order must be pair");
+        return;
+    end
+
+    c = parcluster;
+    c.NumWorkers = order;
+    parpool('local', order);
+    
     x = linspace(xmin,xmax,N);
     delta_x = x(2) - x(1);
     
@@ -18,12 +27,21 @@ function result = genericKDV(f, xmin, xmax, N, tmax, delta_t, plotter)
     udata = u.'; tdata = 0;
     U = fft(u);
 
+    gammas = repelem(gammaSym(order), 2); % [g1;g1;g2;g2;g3;g3...]
+    
     for n = 1:nmax
         t = n*delta_t;
         
-        U = fiLinear(U, k, delta_t);
-        U = fiNonLinear(U, k, delta_t);
-
+        spmd(order) % Abro el trabajo paralelo
+            term = gammas(labindex) * termAfinSym(U, k, delta_t, labindex);
+        end
+  
+        % Acumulo en U los resultados, que estan en cada term{i}
+        U = zeros(1, N);
+        for i=1:order
+            U = U + term{i};
+        end
+        
         if mod(n,nplt) == 0
             u = real(ifft(U));
             udata = [udata u.']; tdata = [tdata t];
@@ -32,6 +50,8 @@ function result = genericKDV(f, xmin, xmax, N, tmax, delta_t, plotter)
             end
         end
     end
+    
+    delete(gcp('nocreate'))
     
     if plotter
         figure

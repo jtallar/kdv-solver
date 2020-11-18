@@ -11,6 +11,26 @@ c_2 = 3;
 % Ver si es x+8 o x+3 aca:         .|.
 u0 = @(x)(1/2*c_1*(sech(sqrt(c_1)*(x+8)/2)).^2 + 1/2*c_2*(sech(sqrt(c_2)*(x+1)/2)).^2);
 
+% tic
+% lt1 = lieTrotter(u0, xmin, xmax, N, tmax, delta_t, true);
+% toc
+
+% tic
+% lt2 = lieTrotter(u0, xmin, xmax, N, tmax, delta_t/2, false);
+% toc
+% 
+% tic
+% lt3 = lieTrotter(u0, xmin, xmax, N, tmax, delta_t/4, false);
+% toc
+
+% norm(lt2-lt1,inf)
+% norm(lt3-lt2,inf)
+
+order = 2;
+% tic
+% as2 = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, true);
+% toc
+
 tic
-genericKDV(u0, xmin, xmax, N, tmax, delta_t, false);
+as2 = afinSymSPMD(u0, order, xmin, xmax, N, tmax, delta_t, true);
 toc
