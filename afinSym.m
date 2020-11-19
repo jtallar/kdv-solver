@@ -1,4 +1,4 @@
-function result = afinSym(f, order, xmin, xmax, N, tmax, delta_t, plotter)
+function [result_u, result_t] = afinSym(f, order, xmin, xmax, N, tmax, delta_t, plotter)
     if mod(order,2) ~= 0 || order <= 0
         disp('Order must be pair');
         return;
@@ -48,5 +48,6 @@ function result = afinSym(f, order, xmin, xmax, N, tmax, delta_t, plotter)
         plot3D(x, udata(:,1:4:end)', tdata(1:4:end), xmin, xmax, 0, 10, 0, tmax);
     end
     
-    result = udata;
+    result_u = udata;
+    result_t = tdata;
 end

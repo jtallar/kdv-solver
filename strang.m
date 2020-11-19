@@ -1,4 +1,4 @@
-function result = strang(f, xmin, xmax, N, tmax, delta_t, plotter)
+function [result_u, result_t] = strang(f, xmin, xmax, N, tmax, delta_t, plotter)
     x = linspace(xmin,xmax,N);
     delta_x = x(2) - x(1);
     
@@ -39,5 +39,6 @@ function result = strang(f, xmin, xmax, N, tmax, delta_t, plotter)
         plot3D(x, udata(:,1:4:end)', tdata(1:4:end), xmin, xmax, 0, 10, 0, tmax);
     end
     
-    result = udata;
+    result_u = udata;
+    result_t = tdata;
 end
