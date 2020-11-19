@@ -77,54 +77,54 @@ order = 2;
 % % ----------------------------------------------------------------------
 % 
 % Variacion de Speed Up segun el orden ---------------------------------
-N = 128; delta_t = 0.0001;
- 
-order = 2;
-disp('----- Afin Simetrico Orden 2 -----');
-disp('Tiempo sin spmd Orden 2');
-tic
-as1o2s = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, false);
-toc
-disp('Tiempo CON SPMD Orden 2');
-as1o2p = afinSymSPMD(u0, order, xmin, xmax, N, tmax, delta_t, false);
-dif = norm(as1o2s-as1o2p,inf);
-disp('Check diferencia ~0');
-disp(dif);
-
-order = 4;
-disp('----- Afin Simetrico Orden 4 -----');
-disp('Tiempo sin spmd Orden 4');
-tic
-as2o4s = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, false);
-toc
-disp('Tiempo CON SPMD Orden 4');
-as2o4p = afinSymSPMD(u0, order, xmin, xmax, N, tmax, delta_t, false);
-dif = norm(as2o4s-as2o4p,inf);
-disp('Check diferencia ~0');
-disp(dif);
-
-order = 6;
-disp('----- Afin Simetrico Orden 6 -----');
-disp('Tiempo sin spmd Orden 6');
-tic
-as3o6s = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, false);
-toc
-disp('Tiempo CON SPMD Orden 6');
-as3o6p = afinSymSPMD(u0, order, xmin, xmax, N, tmax, delta_t, false);
-dif = norm(as3o6s-as3o6p,inf);
-disp('Check diferencia ~0');
-disp(dif);
+% N = 128; delta_t = 0.0001;
+%  
+% order = 2;
+% disp('----- Afin Simetrico Orden 2 -----');
+% disp('Tiempo sin spmd Orden 2');
+% tic
+% as1o2s = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, false);
+% toc
+% disp('Tiempo CON SPMD Orden 2');
+% as1o2p = afinSymSPMD(u0, order, xmin, xmax, N, tmax, delta_t, false);
+% dif = norm(as1o2s-as1o2p,inf);
+% disp('Check diferencia ~0');
+% disp(dif);
+% 
+% order = 4;
+% disp('----- Afin Simetrico Orden 4 -----');
+% disp('Tiempo sin spmd Orden 4');
+% tic
+% as2o4s = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, false);
+% toc
+% disp('Tiempo CON SPMD Orden 4');
+% as2o4p = afinSymSPMD(u0, order, xmin, xmax, N, tmax, delta_t, false);
+% dif = norm(as2o4s-as2o4p,inf);
+% disp('Check diferencia ~0');
+% disp(dif);
+% 
+% order = 6;
+% disp('----- Afin Simetrico Orden 6 -----');
+% disp('Tiempo sin spmd Orden 6');
+% tic
+% as3o6s = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, false);
+% toc
+% disp('Tiempo CON SPMD Orden 6');
+% as3o6p = afinSymSPMD(u0, order, xmin, xmax, N, tmax, delta_t, false);
+% dif = norm(as3o6s-as3o6p,inf);
+% disp('Check diferencia ~0');
+% disp(dif);
 % 
 % % ----------------------------------------------------------------------
 % 
 % % Animaciones temporales -----------------------------------------------
-% set(gca,'FontSize',8)
-% set(gca,'LineWidth',2)
-% 
-% N = 256; delta_t = 0.000005;
-% 
-% disp('---- Afin Simetrico Orden 4 con graficos ----');
-% order = 4;
-% as1o4 = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, true);
-% 
+set(gca,'FontSize',8)
+set(gca,'LineWidth',2)
+
+N = 256; delta_t = 0.000005;
+
+disp('---- Afin Simetrico Orden 4 con graficos ----');
+order = 4;
+as1o4 = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, true);
+
 % % ----------------------------------------------------------------------
