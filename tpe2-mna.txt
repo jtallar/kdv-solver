@@ -29,3 +29,120 @@ Error con Afin Simetrico Orden 4
 ---- Afin Simetrico Orden 6 ----
 Error con Afin Simetrico Orden 6
     0.2394
+
+----- Afin Simetrico Orden 2 -----
+Tiempo sin spmd Orden 2
+Elapsed time is 1.120946 seconds.
+Tiempo CON SPMD Orden 2
+Starting parallel pool (parpool) using the 'local' profile ...
+Preserving jobs with IDs: 1 because they contain crash dump files.
+You can use 'delete(myCluster.Jobs)' to remove all jobs created with profile local. To create 'myCluster' use 'myCluster = parcluster('local')'.
+connected to 2 workers.
+Elapsed time is 350.307442 seconds.
+Parallel pool using the 'local' profile is shutting down.
+Check diferencia ~0
+     0
+
+----- Afin Simetrico Orden 4 -----
+Tiempo sin spmd Orden 4
+Elapsed time is 3.244791 seconds.
+Tiempo CON SPMD Orden 4
+Starting parallel pool (parpool) using the 'local' profile ...
+Preserving jobs with IDs: 1 because they contain crash dump files.
+You can use 'delete(myCluster.Jobs)' to remove all jobs created with profile local. To create 'myCluster' use 'myCluster = parcluster('local')'.
+connected to 4 workers.
+Elapsed time is 523.746044 seconds.
+Parallel pool using the 'local' profile is shutting down.
+Check diferencia ~0
+     0
+
+----- Afin Simetrico Orden 6 -----
+Tiempo sin spmd Orden 6
+Elapsed time is 6.312691 seconds.
+Tiempo CON SPMD Orden 6
+Starting parallel pool (parpool) using the 'local' profile ...
+Preserving jobs with IDs: 1 because they contain crash dump files.
+You can use 'delete(myCluster.Jobs)' to remove all jobs created with profile local. To create 'myCluster' use 'myCluster = parcluster('local')'.
+connected to 6 workers.
+Elapsed time is 686.005237 seconds.
+Parallel pool using the 'local' profile is shutting down.
+Check diferencia ~0
+     0
+
+----- Afin Simetrico Orden 2 -----
+Tiempo sin spmd Orden 2
+Elapsed time is 1.107611 seconds.
+Tiempo CON SPMD Orden 2
+Starting parallel pool (parpool) using the 'local' profile ...
+Preserving jobs with IDs: 1 because they contain crash dump files.
+You can use 'delete(myCluster.Jobs)' to remove all jobs created with profile local. To create 'myCluster' use 'myCluster = parcluster('local')'.
+connected to 2 workers.
+Elapsed time is 360.001656 seconds.
+Parallel pool using the 'local' profile is shutting down.
+Check diferencia ~0
+     0
+
+----- Afin Simetrico Orden 4 -----
+Tiempo sin spmd Orden 4
+Elapsed time is 3.214733 seconds.
+Tiempo CON SPMD Orden 4
+Starting parallel pool (parpool) using the 'local' profile ...
+Preserving jobs with IDs: 1 because they contain crash dump files.
+You can use 'delete(myCluster.Jobs)' to remove all jobs created with profile local. To create 'myCluster' use 'myCluster = parcluster('local')'.
+connected to 4 workers.
+Elapsed time is 575.326524 seconds.
+Parallel pool using the 'local' profile is shutting down.
+Check diferencia ~0
+     0
+
+----- Afin Simetrico Orden 6 -----
+Tiempo sin spmd Orden 6
+Elapsed time is 6.340912 seconds.
+Tiempo CON SPMD Orden 6
+Starting parallel pool (parpool) using the 'local' profile ...
+Preserving jobs with IDs: 1 because they contain crash dump files.
+You can use 'delete(myCluster.Jobs)' to remove all jobs created with profile local. To create 'myCluster' use 'myCluster = parcluster('local')'.
+connected to 6 workers.
+Elapsed time is 758.964509 seconds.
+Parallel pool using the 'local' profile is shutting down.
+Check diferencia ~0
+     0
+
+----- Afin Simetrico Orden 2 -----
+Tiempo sin spmd Orden 2
+Elapsed time is 1.097024 seconds.
+Tiempo CON SPMD Orden 2
+Starting parallel pool (parpool) using the 'local' profile ...
+Preserving jobs with IDs: 1 because they contain crash dump files.
+You can use 'delete(myCluster.Jobs)' to remove all jobs created with profile local. To create 'myCluster' use 'myCluster = parcluster('local')'.
+connected to 2 workers.
+Elapsed time is 435.779423 seconds.
+Parallel pool using the 'local' profile is shutting down.
+Check diferencia ~0
+     0
+
+----- Afin Simetrico Orden 4 -----
+Tiempo sin spmd Orden 4
+Elapsed time is 3.356550 seconds.
+Tiempo CON SPMD Orden 4
+Starting parallel pool (parpool) using the 'local' profile ...
+Preserving jobs with IDs: 1 because they contain crash dump files.
+You can use 'delete(myCluster.Jobs)' to remove all jobs created with profile local. To create 'myCluster' use 'myCluster = parcluster('local')'.
+connected to 4 workers.
+Elapsed time is 604.918183 seconds.
+Parallel pool using the 'local' profile is shutting down.
+Check diferencia ~0
+     0
+
+----- Afin Simetrico Orden 6 -----
+Tiempo sin spmd Orden 6
+Elapsed time is 6.276939 seconds.
+Tiempo CON SPMD Orden 6
+Starting parallel pool (parpool) using the 'local' profile ...
+Preserving jobs with IDs: 1 because they contain crash dump files.
+You can use 'delete(myCluster.Jobs)' to remove all jobs created with profile local. To create 'myCluster' use 'myCluster = parcluster('local')'.
+connected to 6 workers.
+Elapsed time is 820.250671 seconds.
+Parallel pool using the 'local' profile is shutting down.
+Check diferencia ~0
+     0
