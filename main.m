@@ -58,30 +58,30 @@ order = 2;
 % % ----------------------------------------------------------------------
 
 % % Exactitud del afin 4to orden entre pasos -----------------------------
-N = 256; delta_t = 0.000005;
- 
-disp('---- Afin Simetrico Orden 4 ----');
-order = 4;
-[as1o4, t_as1o4] = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, false);
-[as2o4, t_as2o4] = afinSym(u0, order, xmin, xmax, N, tmax, delta_t/2, false);
-[as4o4, t_as4o4] = afinSym(u0, order, xmin, xmax, N, tmax, delta_t/4, false);
-[as8o4, t_as8o4] = afinSym(u0, order, xmin, xmax, N, tmax, delta_t/8, false);
-
-err_h = max(abs(as1o4-as2o4));
-figure; plotError(t_as1o4, err_h, 'Afin Sim Orden 4 Paso h');
-
-err_h_2 = max(abs(as2o4-as4o4));
-figure; plotError(t_as2o4, err_h_2, 'Afin Sim Orden 4 Paso h/2');
-
-err_h_4 = max(abs(as4o4-as8o4));
-figure; plotError(t_as4o4, err_h_4, 'Afin Sim Orden 4 Paso h/4');
-
-figure;
-plotError(t_as1o4, err_h, 'Afin Sim');
-hold on
-plotError(t_as2o4, err_h_2, 'Afin Sim');
-plotError(t_as4o4, err_h_4, 'Afin Sim');
-hold off
+% N = 256; delta_t = 0.000005;
+%  
+% disp('---- Afin Simetrico Orden 4 ----');
+% order = 4;
+% [as1o4, t_as1o4] = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, false);
+% [as2o4, t_as2o4] = afinSym(u0, order, xmin, xmax, N, tmax, delta_t/2, false);
+% [as4o4, t_as4o4] = afinSym(u0, order, xmin, xmax, N, tmax, delta_t/4, false);
+% [as8o4, t_as8o4] = afinSym(u0, order, xmin, xmax, N, tmax, delta_t/8, false);
+% 
+% err_h = max(abs(as1o4-as2o4));
+% figure; plotError(t_as1o4, err_h, 'Afin Sim Orden 4 Paso h');
+% 
+% err_h_2 = max(abs(as2o4-as4o4));
+% figure; plotError(t_as2o4, err_h_2, 'Afin Sim Orden 4 Paso h/2');
+% 
+% err_h_4 = max(abs(as4o4-as8o4));
+% figure; plotError(t_as4o4, err_h_4, 'Afin Sim Orden 4 Paso h/4');
+% 
+% figure;
+% plotError(t_as1o4, err_h, 'Afin Sim');
+% hold on
+% plotError(t_as2o4, err_h_2, 'Afin Sim');
+% plotError(t_as4o4, err_h_4, 'Afin Sim');
+% hold off
 
 % % ----------------------------------------------------------------------
 % 
@@ -127,13 +127,13 @@ hold off
 % % ----------------------------------------------------------------------
 % 
 % % Animaciones temporales -----------------------------------------------
-% set(gca,'FontSize',8)
-% set(gca,'LineWidth',2)
-% 
-% N = 256; delta_t = 0.000005;
-% 
-% disp('---- Afin Simetrico Orden 4 con graficos ----');
-% order = 4;
-% as1o4 = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, true);
+set(gca,'FontSize',8)
+set(gca,'LineWidth',2)
+
+N = 256; delta_t = 0.000005;
+
+disp('---- Afin Simetrico Orden 4 con graficos ----');
+order = 4;
+as1o4 = afinSym(u0, order, xmin, xmax, N, tmax, delta_t, true);
 
 % % ----------------------------------------------------------------------
